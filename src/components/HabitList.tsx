@@ -1,5 +1,8 @@
 export function HabitList() {
-	const habits = [];
+	const habits = [
+		{ id: 1, name: 'Hi' },
+		{ id: 2, name: 'Bye' },
+	];
 
 	if (habits.length === 0) {
 		return (
@@ -9,5 +12,11 @@ export function HabitList() {
 		);
 	}
 
-	return <div className='flex flex-col gap-3'></div>;
+	return (
+		<div className='flex flex-col gap-3'>
+			{habits.map((habit) => (
+				<h1 key={habit.id}>{habit.name}</h1>
+			))}
+		</div>
+	);
 }
