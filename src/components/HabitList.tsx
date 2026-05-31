@@ -59,7 +59,7 @@ function HabitItem({ habit, deleteHabit, toggleHabit }: HabitItemProps) {
 			<div className='flex items-center justify-between'>
 				<div className='flex gap-3 items-center'>
 					<span className='font-medium'>{habit.name}</span>
-					<span className='text-sm text-amber-400'>🔥 {streak}</span>
+					{streak !== 0 && <span className='text-sm text-amber-400'>🔥 {streak}</span>}
 				</div>
 				<Button
 					onClick={() => deleteHabit(habit.id)}
